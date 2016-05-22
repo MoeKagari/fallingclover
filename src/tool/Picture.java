@@ -16,13 +16,15 @@ public final class Picture {
 		return new File("resource\\background.jpg");
 	}
 
-	public static File[] getCloverPicture() {
-		return new File[] {
+	public static File getCloverPicture() {
+		File[] files =  new File[] {
 				new File("resource\\clover1.png"),
 				new File("resource\\clover2.png"),
 				new File("resource\\clover3.png"),
 				new File("resource\\clover4.png")
-		};
+				};
+		
+		return files[Random.get().nextInt(files.length)];
 	}
 
 	public static File getCharacterPicture() {
